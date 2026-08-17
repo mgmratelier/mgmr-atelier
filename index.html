@@ -3,58 +3,42 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>M.G.M.R ATELIER</title>
+<title>M.G.M.R ATELIER — Modern Luxury</title>
 
 <style>
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-}
-
-html{
-  scroll-behavior:smooth;
-}
-
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
 body{
-  font-family:Arial, Helvetica, sans-serif;
-  background:#f7f6f2;
-  color:#171717;
+  background:#f5f3ee;
+  color:#151515;
+  font-family:Arial,Helvetica,sans-serif;
 }
+a{text-decoration:none;color:inherit}
+button{font:inherit}
 
-a{
-  color:inherit;
-  text-decoration:none;
-}
-
-button{
-  font:inherit;
-}
-
-.header{
+header{
   position:fixed;
   top:0;
-  left:0;
   width:100%;
-  z-index:1000;
-  padding:22px 5%;
+  z-index:100;
+  padding:24px 5%;
   display:flex;
   justify-content:space-between;
   align-items:center;
-  mix-blend-mode:multiply;
+  background:rgba(245,243,238,.88);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid rgba(0,0,0,.08);
 }
 
 .logo{
-  font-size:19px;
+  font-size:17px;
   letter-spacing:7px;
-  font-weight:500;
 }
 
-.nav{
+nav{
   display:flex;
   gap:32px;
-  font-size:11px;
+  font-size:10px;
   letter-spacing:2px;
   text-transform:uppercase;
 }
@@ -67,207 +51,197 @@ button{
 }
 
 .hero{
-  height:100vh;
-  min-height:650px;
-  display:flex;
-  align-items:flex-end;
-  padding:0 5% 55px;
-  position:relative;
-  background:
-    linear-gradient(to top,rgba(0,0,0,.45),transparent 55%),
-    url("https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1800&q=90")
-    center/cover;
-  color:white;
+  min-height:100vh;
+  padding:150px 5% 60px;
+  display:grid;
+  grid-template-columns:1fr 1.25fr;
+  gap:5%;
+  align-items:center;
 }
 
-.hero-content{
-  max-width:650px;
+.hero-text{
+  padding-left:5%;
 }
 
-.eyebrow{
-  font-size:10px;
+.kicker{
+  font-size:9px;
   letter-spacing:4px;
   text-transform:uppercase;
-  margin-bottom:18px;
+  color:#777;
+  margin-bottom:25px;
 }
 
 .hero h1{
   font-family:Georgia,serif;
-  font-size:clamp(48px,8vw,105px);
+  font-size:clamp(60px,8vw,120px);
   font-weight:400;
-  line-height:.9;
-  letter-spacing:-4px;
+  line-height:.88;
+  letter-spacing:-5px;
 }
 
-.hero p{
-  margin-top:22px;
-  font-size:13px;
-  line-height:1.8;
-  max-width:430px;
+.hero-copy{
+  max-width:400px;
+  margin-top:35px;
+  color:#555;
+  font-size:12px;
+  line-height:1.9;
 }
 
 .hero-link{
   display:inline-block;
-  margin-top:28px;
-  border-bottom:1px solid white;
-  padding-bottom:8px;
-  font-size:10px;
+  margin-top:30px;
+  padding-bottom:9px;
+  border-bottom:1px solid #111;
+  font-size:9px;
   letter-spacing:3px;
   text-transform:uppercase;
 }
 
-.section{
-  padding:110px 5%;
+.hero-image{
+  height:82vh;
+  min-height:600px;
+  background:
+  url("https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=1600&q=90")
+  center/cover;
 }
 
-.section-head{
+.section{
+  padding:120px 5%;
+}
+
+.heading{
   display:flex;
   justify-content:space-between;
   align-items:end;
   margin-bottom:45px;
 }
 
-.section-title{
+.heading h2{
   font-family:Georgia,serif;
-  font-size:48px;
+  font-size:52px;
   font-weight:400;
 }
 
-.section-note{
-  font-size:10px;
-  letter-spacing:2px;
-  text-transform:uppercase;
+.heading span{
+  font-size:9px;
+  letter-spacing:3px;
+  color:#777;
 }
 
-.collection{
+.products{
   display:grid;
   grid-template-columns:repeat(2,1fr);
-  gap:18px;
+  gap:25px 16px;
 }
 
-.card{
+.product{
   cursor:pointer;
 }
 
-.card-image{
+.product-image{
   overflow:hidden;
   aspect-ratio:4/5;
-  background:#e9e7e1;
+  background:#e8e5de;
 }
 
-.card-image img{
+.product-image img{
   width:100%;
   height:100%;
   object-fit:cover;
   transition:transform .8s ease;
 }
 
-.card:hover img{
-  transform:scale(1.035);
+.product:hover img{
+  transform:scale(1.04);
 }
 
-.card-info{
-  padding:17px 2px 35px;
+.product-info{
+  padding:15px 2px 25px;
   display:flex;
   justify-content:space-between;
-  font-size:10px;
+  font-size:9px;
   letter-spacing:2px;
   text-transform:uppercase;
 }
 
-.card-info span:last-child{
+.product-info small{
   color:#777;
 }
 
-.feature{
-  padding:0 5% 110px;
+.statement{
+  padding:0 5% 120px;
 }
 
-.feature-image{
-  width:100%;
-  height:75vh;
-  min-height:500px;
-  background:
-    url("https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3?auto=format&fit=crop&w=2000&q=90")
-    center/cover;
-  position:relative;
+.statement-box{
+  min-height:75vh;
   display:flex;
   align-items:flex-end;
-  padding:45px;
+  padding:55px;
   color:white;
+  background:
+  linear-gradient(to top,rgba(0,0,0,.6),transparent 65%),
+  url("https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=2000&q=90")
+  center/cover;
 }
 
-.feature-text{
-  max-width:500px;
-}
-
-.feature-text h2{
+.statement h2{
   font-family:Georgia,serif;
-  font-size:55px;
+  font-size:clamp(45px,6vw,85px);
   font-weight:400;
-}
-
-.feature-text p{
-  font-size:12px;
-  line-height:1.8;
-  margin-top:15px;
+  max-width:800px;
+  line-height:.95;
 }
 
 .journal{
   display:grid;
-  grid-template-columns:1fr 1fr 1fr;
+  grid-template-columns:repeat(3,1fr);
   gap:18px;
 }
 
 .journal-card{
-  background:#ebe9e3;
+  background:#e9e6df;
 }
 
 .journal-card img{
+  display:block;
   width:100%;
   aspect-ratio:4/5;
   object-fit:cover;
-  display:block;
 }
 
-.journal-text{
-  padding:25px 20px 30px;
+.journal-content{
+  padding:25px;
 }
 
 .journal-number{
-  font-size:9px;
+  font-size:8px;
   letter-spacing:3px;
   color:#777;
 }
 
-.journal-text h3{
+.journal-content h3{
   font-family:Georgia,serif;
-  font-size:27px;
   font-weight:400;
-  margin:13px 0;
+  font-size:27px;
+  line-height:1.05;
+  margin:15px 0;
 }
 
-.journal-text p{
+.journal-content p{
   font-size:11px;
-  line-height:1.7;
+  line-height:1.8;
   color:#555;
 }
 
 .film{
-  background:#161616;
-  color:white;
+  background:#111;
+  color:#fff;
   padding:120px 5%;
 }
 
-.film-inner{
-  max-width:1300px;
-  margin:auto;
-}
-
 .film-label{
-  font-size:10px;
+  font-size:9px;
   letter-spacing:4px;
-  text-transform:uppercase;
   margin-bottom:25px;
 }
 
@@ -275,116 +249,128 @@ button{
   font-family:Georgia,serif;
   font-size:60px;
   font-weight:400;
-  margin-bottom:45px;
+  margin-bottom:50px;
 }
 
-.video-box{
+.film-box{
   position:relative;
-  width:100%;
   aspect-ratio:16/9;
-  background:#222;
   overflow:hidden;
+  background:#222;
 }
 
-.video-box video{
+.film-box img{
   width:100%;
   height:100%;
   object-fit:cover;
 }
 
-.video-placeholder{
-  position:absolute;
-  inset:0;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  background:
-    linear-gradient(rgba(0,0,0,.1),rgba(0,0,0,.4)),
-    url("https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=1800&q=85")
-    center/cover;
-}
-
 .play{
-  width:80px;
-  height:80px;
+  position:absolute;
+  left:50%;
+  top:50%;
+  transform:translate(-50%,-50%);
+  width:75px;
+  height:75px;
   border:1px solid white;
   border-radius:50%;
   display:flex;
-  align-items:center;
   justify-content:center;
-  font-size:20px;
+  align-items:center;
+  font-size:18px;
 }
 
 .atelier{
   display:grid;
   grid-template-columns:1fr 1fr;
-  min-height:650px;
+  min-height:700px;
 }
 
 .atelier-image{
   background:
-    url("https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=1400&q=90")
-    center/cover;
+  url("https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=1600&q=90")
+  center/cover;
 }
 
-.atelier-content{
-  padding:80px 10%;
+.atelier-text{
+  padding:90px 12%;
   display:flex;
   flex-direction:column;
   justify-content:center;
-  background:#ebe9e3;
+  background:#e9e6df;
 }
 
-.atelier-content .eyebrow{
-  color:#777;
-}
-
-.atelier-content h2{
+.atelier-text h2{
   font-family:Georgia,serif;
-  font-size:60px;
+  font-size:65px;
   font-weight:400;
-  line-height:1;
-  margin-bottom:25px;
+  line-height:.95;
+  margin:20px 0 30px;
 }
 
-.atelier-content p{
-  max-width:470px;
+.atelier-text p{
+  max-width:450px;
+  font-size:12px;
+  line-height:2;
   color:#555;
-  font-size:13px;
-  line-height:1.9;
 }
 
-.footer{
+.private{
+  text-align:center;
+  padding:140px 20px;
+}
+
+.private h2{
+  font-family:Georgia,serif;
+  font-size:65px;
+  font-weight:400;
+}
+
+.private p{
+  max-width:470px;
+  margin:25px auto;
+  color:#666;
+  font-size:12px;
+  line-height:1.8;
+}
+
+.private-button{
+  display:inline-block;
+  border:1px solid #111;
+  padding:18px 35px;
+  margin-top:20px;
+  font-size:9px;
+  letter-spacing:3px;
+}
+
+footer{
   background:#111;
-  color:white;
-  padding:70px 5% 30px;
+  color:#fff;
+  padding:65px 5% 25px;
 }
 
 .footer-top{
   display:flex;
   justify-content:space-between;
-  align-items:start;
-  padding-bottom:70px;
+  padding-bottom:60px;
 }
 
 .footer-logo{
-  font-size:20px;
-  letter-spacing:8px;
+  letter-spacing:7px;
 }
 
 .footer-links{
   display:flex;
-  gap:35px;
-  font-size:10px;
+  gap:30px;
+  font-size:9px;
   letter-spacing:2px;
-  text-transform:uppercase;
 }
 
 .footer-bottom{
   border-top:1px solid #333;
-  padding-top:25px;
+  padding-top:22px;
   color:#888;
-  font-size:9px;
+  font-size:8px;
   letter-spacing:2px;
   display:flex;
   justify-content:space-between;
@@ -392,57 +378,61 @@ button{
 
 @media(max-width:700px){
 
-  .header{
+  header{
     padding:20px 6%;
   }
 
-  .nav{
-    display:none;
-  }
-
-  .menu{
-    display:block;
-    color:inherit;
-  }
+  nav{display:none}
+  .menu{display:block}
 
   .hero{
-    padding:0 6% 40px;
-    min-height:720px;
+    display:block;
+    padding:120px 6% 50px;
+  }
+
+  .hero-text{
+    padding:0;
+    margin-bottom:35px;
   }
 
   .hero h1{
-    letter-spacing:-2px;
+    font-size:64px;
+    letter-spacing:-3px;
+  }
+
+  .hero-image{
+    height:70vh;
+    min-height:500px;
   }
 
   .section{
-    padding:75px 6%;
+    padding:80px 6%;
   }
 
-  .section-head{
+  .heading{
     display:block;
   }
 
-  .section-title{
-    font-size:40px;
+  .heading h2{
+    font-size:42px;
     margin-bottom:12px;
   }
 
-  .collection{
+  .products{
     grid-template-columns:1fr;
-    gap:0;
   }
 
-  .feature{
-    padding:0 6% 75px;
+  .statement{
+    padding:0 6% 80px;
   }
 
-  .feature-image{
-    height:70vh;
-    padding:25px;
+  .statement-box{
+    min-height:70vh;
+    padding:30px;
   }
 
-  .feature-text h2{
-    font-size:42px;
+  .statement h2{
+    font-size:48px;
   }
 
   .journal{
@@ -450,11 +440,11 @@ button{
   }
 
   .film{
-    padding:75px 6%;
+    padding:80px 6%;
   }
 
   .film h2{
-    font-size:43px;
+    font-size:45px;
   }
 
   .atelier{
@@ -462,15 +452,23 @@ button{
   }
 
   .atelier-image{
-    min-height:550px;
+    min-height:600px;
   }
 
-  .atelier-content{
-    padding:70px 8%;
+  .atelier-text{
+    padding:75px 9%;
   }
 
-  .atelier-content h2{
-    font-size:45px;
+  .atelier-text h2{
+    font-size:48px;
+  }
+
+  .private{
+    padding:100px 20px;
+  }
+
+  .private h2{
+    font-size:48px;
   }
 
   .footer-top{
@@ -480,7 +478,6 @@ button{
   .footer-links{
     margin-top:35px;
     flex-wrap:wrap;
-    gap:20px;
   }
 
   .footer-bottom{
@@ -493,10 +490,10 @@ button{
 
 <body>
 
-<header class="header">
+<header>
   <a href="#" class="logo">M.G.M.R</a>
 
-  <nav class="nav">
+  <nav>
     <a href="#collection">Collection</a>
     <a href="#journal">Journal</a>
     <a href="#films">Films</a>
@@ -506,188 +503,265 @@ button{
   <button class="menu">☰</button>
 </header>
 
+
 <section class="hero">
-  <div class="hero-content">
-    <div class="eyebrow">M.G.M.R ATELIER · 2026</div>
 
-    <h1>Modern<br>Silence.</h1>
+  <div class="hero-text">
 
-    <p>
-      A study in proportion, structure and quiet luxury.
-      M.G.M.R Atelier presents a new language of contemporary fashion.
+    <div class="kicker">M.G.M.R ATELIER · 2026</div>
+
+    <h1>
+      The<br>
+      Quiet<br>
+      Form.
+    </h1>
+
+    <p class="hero-copy">
+      A contemporary study of silhouette, material and
+      architectural proportion. M.G.M.R Atelier creates
+      modern luxury beyond the noise of the season.
     </p>
 
     <a href="#collection" class="hero-link">
-      Discover the collection
+      Explore collection
     </a>
+
   </div>
+
+  <div class="hero-image"></div>
+
 </section>
+
 
 <section class="section" id="collection">
 
-  <div class="section-head">
-    <div class="section-title">Collection</div>
-    <div class="section-note">SZN 01 — 2026</div>
+  <div class="heading">
+
+    <h2>Collection</h2>
+
+    <span>ARCHÉA · SZN 01 · 2026</span>
+
   </div>
 
-  <div class="collection">
 
-    <article class="card">
-      <div class="card-image">
+  <div class="products">
+
+    <article class="product">
+
+      <div class="product-image">
         <img src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=1200&q=90">
       </div>
-      <div class="card-info">
+
+      <div class="product-info">
         <span>ARCHÉA 01</span>
-        <span>Structured Silk</span>
+        <small>Silk Structure</small>
       </div>
+
     </article>
 
-    <article class="card">
-      <div class="card-image">
+
+    <article class="product">
+
+      <div class="product-image">
         <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=1200&q=90">
       </div>
-      <div class="card-info">
+
+      <div class="product-info">
         <span>ARCHÉA 02</span>
-        <span>Soft Ivory</span>
+        <small>Soft Ivory</small>
       </div>
+
     </article>
 
-    <article class="card">
-      <div class="card-image">
+
+    <article class="product">
+
+      <div class="product-image">
+        <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1200&q=90">
+      </div>
+
+      <div class="product-info">
+        <span>ARCHÉA 03</span>
+        <small>Modern Form</small>
+      </div>
+
+    </article>
+
+
+    <article class="product">
+
+      <div class="product-image">
         <img src="https://images.unsplash.com/photo-1506629905607-d9c36f7f6d5c?auto=format&fit=crop&w=1200&q=90">
       </div>
-      <div class="card-info">
-        <span>ARCHÉA 03</span>
-        <span>Architectural Form</span>
-      </div>
-    </article>
 
-    <article class="card">
-      <div class="card-image">
-        <img src="https://images.unsplash.com/photo-1485230895905-ec40ba36b9bc?auto=format&fit=crop&w=1200&q=90">
-      </div>
-      <div class="card-info">
+      <div class="product-info">
         <span>ARCHÉA 04</span>
-        <span>Silk Movement</span>
+        <small>Silk Movement</small>
       </div>
+
     </article>
 
   </div>
+
 </section>
 
-<section class="feature">
 
-  <div class="feature-image">
-    <div class="feature-text">
-      <div class="eyebrow">The Midnight Architecture</div>
+<section class="statement">
 
-      <h2>Form becomes identity.</h2>
+  <div class="statement-box">
 
-      <p>
-        A visual exploration of volume, light and movement.
-        Designed in silence, created with intention.
-      </p>
-    </div>
+    <h2>
+      When fashion<br>
+      becomes architecture.
+    </h2>
+
   </div>
 
 </section>
 
-<section class="film" id="films">
-
-  <div class="film-inner">
-
-    <div class="film-label">M.G.M.R FILM 001</div>
-
-    <h2>The language of movement.</h2>
-
-    <div class="video-box">
-
-      <div class="video-placeholder">
-        <div class="play">▶</div>
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
 
 <section class="section" id="journal">
 
-  <div class="section-head">
-    <div class="section-title">Journal</div>
-    <div class="section-note">Ideas · Materials · Architecture</div>
+  <div class="heading">
+
+    <h2>Journal</h2>
+
+    <span>Ideas · Materials · Culture</span>
+
   </div>
+
 
   <div class="journal">
 
     <article class="journal-card">
+
       <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1000&q=90">
 
-      <div class="journal-text">
+      <div class="journal-content">
+
         <div class="journal-number">01 — FORM</div>
+
         <h3>The architecture of a silhouette.</h3>
+
         <p>
           Exploring proportion, negative space and the relationship
-          between the human body and architectural form.
+          between fashion and architecture.
         </p>
+
       </div>
+
     </article>
 
-    <article class="journal-card">
-      <img src="https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?auto=format&fit=crop&w=1000&q=90">
 
-      <div class="journal-text">
+    <article class="journal-card">
+
+      <img src="https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3?auto=format&fit=crop&w=1000&q=90">
+
+      <div class="journal-content">
+
         <div class="journal-number">02 — MATERIAL</div>
+
         <h3>When fabric becomes sculpture.</h3>
+
         <p>
           Silk gazar, satin, chiffon and hand-finished details
-          become part of the visual language of the atelier.
+          become part of the M.G.M.R visual language.
         </p>
+
       </div>
+
     </article>
 
+
     <article class="journal-card">
+
       <img src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?auto=format&fit=crop&w=1000&q=90">
 
-      <div class="journal-text">
+      <div class="journal-content">
+
         <div class="journal-number">03 — VISION</div>
+
         <h3>A quieter kind of luxury.</h3>
+
         <p>
           Timeless pieces created beyond seasonal noise,
-          where restraint becomes the signature.
+          where restraint becomes a signature.
         </p>
+
       </div>
+
     </article>
 
   </div>
+
 </section>
+
+
+<section class="film" id="films">
+
+  <div class="film-label">M.G.M.R FILM 001</div>
+
+  <h2>The language of movement.</h2>
+
+  <div class="film-box">
+
+    <img src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=1800&q=90">
+
+    <div class="play">▶</div>
+
+  </div>
+
+</section>
+
 
 <section class="atelier" id="atelier">
 
   <div class="atelier-image"></div>
 
-  <div class="atelier-content">
+  <div class="atelier-text">
 
-    <div class="eyebrow">The Atelier</div>
+    <div class="kicker">The Atelier</div>
 
     <h2>Designed<br>in silence.</h2>
 
     <p>
-      M.G.M.R Atelier explores a contemporary interpretation of
-      luxury through sculptural silhouettes, refined materials
-      and considered details.
+      M.G.M.R Atelier explores a contemporary interpretation
+      of luxury through sculptural silhouettes, refined
+      materials and considered details.
     </p>
 
   </div>
 
 </section>
 
-<footer class="footer">
+
+<section class="private">
+
+  <div class="kicker">Private Client</div>
+
+  <h2>PRIVATE ACCESS</h2>
+
+  <p>
+    Enter the private world of M.G.M.R Atelier.
+    Access is reserved for selected clients and
+    couture enquiries.
+  </p>
+
+  <a class="private-button"
+     href="https://mgmratelier.github.io/mgmr-website/">
+     REQUEST ACCESS
+  </a>
+
+</section>
+
+
+<footer>
 
   <div class="footer-top">
 
-    <div class="footer-logo">M.G.M.R ATELIER</div>
+    <div class="footer-logo">
+      M.G.M.R ATELIER
+    </div>
 
     <div class="footer-links">
       <a href="#collection">Collection</a>
@@ -699,8 +773,11 @@ button{
   </div>
 
   <div class="footer-bottom">
+
     <span>© 2026 M.G.M.R ATELIER</span>
-    <span>MODERN LUXURY / ARCHIVE</span>
+
+    <span>MODERN LUXURY · ARCHIVE</span>
+
   </div>
 
 </footer>
