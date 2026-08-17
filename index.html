@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>M.G.M.R ATELIER</title>
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:Arial, Helvetica, sans-serif;
+  background:#f7f6f2;
+  color:#171717;
+}
+
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+button{
+  font:inherit;
+}
+
+.header{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  z-index:1000;
+  padding:22px 5%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  mix-blend-mode:multiply;
+}
+
+.logo{
+  font-size:19px;
+  letter-spacing:7px;
+  font-weight:500;
+}
+
+.nav{
+  display:flex;
+  gap:32px;
+  font-size:11px;
+  letter-spacing:2px;
+  text-transform:uppercase;
+}
+
+.menu{
+  display:none;
+  border:0;
+  background:none;
+  font-size:22px;
+}
+
+.hero{
+  height:100vh;
+  min-height:650px;
+  display:flex;
+  align-items:flex-end;
+  padding:0 5% 55px;
+  position:relative;
+  background:
+    linear-gradient(to top,rgba(0,0,0,.45),transparent 55%),
+    url("https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1800&q=90")
+    center/cover;
+  color:white;
+}
+
+.hero-content{
+  max-width:650px;
+}
+
+.eyebrow{
+  font-size:10px;
+  letter-spacing:4px;
+  text-transform:uppercase;
+  margin-bottom:18px;
+}
+
+.hero h1{
+  font-family:Georgia,serif;
+  font-size:clamp(48px,8vw,105px);
+  font-weight:400;
+  line-height:.9;
+  letter-spacing:-4px;
+}
+
+.hero p{
+  margin-top:22px;
+  font-size:13px;
+  line-height:1.8;
+  max-width:430px;
+}
+
+.hero-link{
+  display:inline-block;
+  margin-top:28px;
+  border-bottom:1px solid white;
+  padding-bottom:8px;
+  font-size:10px;
+  letter-spacing:3px;
+  text-transform:uppercase;
+}
+
+.section{
+  padding:110px 5%;
+}
+
+.section-head{
+  display:flex;
+  justify-content:space-between;
+  align-items:end;
+  margin-bottom:45px;
+}
+
+.section-title{
+  font-family:Georgia,serif;
+  font-size:48px;
+  font-weight:400;
+}
+
+.section-note{
+  font-size:10px;
+  letter-spacing:2px;
+  text-transform:uppercase;
+}
+
+.collection{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:18px;
+}
+
+.card{
+  cursor:pointer;
+}
+
+.card-image{
+  overflow:hidden;
+  aspect-ratio:4/5;
+  background:#e9e7e1;
+}
+
+.card-image img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transition:transform .8s ease;
+}
+
+.card:hover img{
+  transform:scale(1.035);
+}
+
+.card-info{
+  padding:17px 2px 35px;
+  display:flex;
+  justify-content:space-between;
+  font-size:10px;
+  letter-spacing:2px;
+  text-transform:uppercase;
+}
+
+.card-info span:last-child{
+  color:#777;
+}
+
+.feature{
+  padding:0 5% 110px;
+}
+
+.feature-image{
+  width:100%;
+  height:75vh;
+  min-height:500px;
+  background:
+    url("https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3?auto=format&fit=crop&w=2000&q=90")
+    center/cover;
+  position:relative;
+  display:flex;
+  align-items:flex-end;
+  padding:45px;
+  color:white;
+}
+
+.feature-text{
+  max-width:500px;
+}
+
+.feature-text h2{
+  font-family:Georgia,serif;
+  font-size:55px;
+  font-weight:400;
+}
+
+.feature-text p{
+  font-size:12px;
+  line-height:1.8;
+  margin-top:15px;
+}
+
+.journal{
+  display:grid;
+  grid-template-columns:1fr 1fr 1fr;
+  gap:18px;
+}
+
+.journal-card{
+  background:#ebe9e3;
+}
+
+.journal-card img{
+  width:100%;
+  aspect-ratio:4/5;
+  object-fit:cover;
+  display:block;
+}
+
+.journal-text{
+  padding:25px 20px 30px;
+}
+
+.journal-number{
+  font-size:9px;
+  letter-spacing:3px;
+  color:#777;
+}
+
+.journal-text h3{
+  font-family:Georgia,serif;
+  font-size:27px;
+  font-weight:400;
+  margin:13px 0;
+}
+
+.journal-text p{
+  font-size:11px;
+  line-height:1.7;
+  color:#555;
+}
+
+.film{
+  background:#161616;
+  color:white;
+  padding:120px 5%;
+}
+
+.film-inner{
+  max-width:1300px;
+  margin:auto;
+}
+
+.film-label{
+  font-size:10px;
+  letter-spacing:4px;
+  text-transform:uppercase;
+  margin-bottom:25px;
+}
+
+.film h2{
+  font-family:Georgia,serif;
+  font-size:60px;
+  font-weight:400;
+  margin-bottom:45px;
+}
+
+.video-box{
+  position:relative;
+  width:100%;
+  aspect-ratio:16/9;
+  background:#222;
+  overflow:hidden;
+}
+
+.video-box video{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.video-placeholder{
+  position:absolute;
+  inset:0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:
+    linear-gradient(rgba(0,0,0,.1),rgba(0,0,0,.4)),
+    url("https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=1800&q=85")
+    center/cover;
+}
+
+.play{
+  width:80px;
+  height:80px;
+  border:1px solid white;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:20px;
+}
+
+.atelier{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  min-height:650px;
+}
+
+.atelier-image{
+  background:
+    url("https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=1400&q=90")
+    center/cover;
+}
+
+.atelier-content{
+  padding:80px 10%;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  background:#ebe9e3;
+}
+
+.atelier-content .eyebrow{
+  color:#777;
+}
+
+.atelier-content h2{
+  font-family:Georgia,serif;
+  font-size:60px;
+  font-weight:400;
+  line-height:1;
+  margin-bottom:25px;
+}
+
+.atelier-content p{
+  max-width:470px;
+  color:#555;
+  font-size:13px;
+  line-height:1.9;
+}
+
+.footer{
+  background:#111;
+  color:white;
+  padding:70px 5% 30px;
+}
+
+.footer-top{
+  display:flex;
+  justify-content:space-between;
+  align-items:start;
+  padding-bottom:70px;
+}
+
+.footer-logo{
+  font-size:20px;
+  letter-spacing:8px;
+}
+
+.footer-links{
+  display:flex;
+  gap:35px;
+  font-size:10px;
+  letter-spacing:2px;
+  text-transform:uppercase;
+}
+
+.footer-bottom{
+  border-top:1px solid #333;
+  padding-top:25px;
+  color:#888;
+  font-size:9px;
+  letter-spacing:2px;
+  display:flex;
+  justify-content:space-between;
+}
+
+@media(max-width:700px){
+
+  .header{
+    padding:20px 6%;
+  }
+
+  .nav{
+    display:none;
+  }
+
+  .menu{
+    display:block;
+    color:inherit;
+  }
+
+  .hero{
+    padding:0 6% 40px;
+    min-height:720px;
+  }
+
+  .hero h1{
+    letter-spacing:-2px;
+  }
+
+  .section{
+    padding:75px 6%;
+  }
+
+  .section-head{
+    display:block;
+  }
+
+  .section-title{
+    font-size:40px;
+    margin-bottom:12px;
+  }
+
+  .collection{
+    grid-template-columns:1fr;
+    gap:0;
+  }
+
+  .feature{
+    padding:0 6% 75px;
+  }
+
+  .feature-image{
+    height:70vh;
+    padding:25px;
+  }
+
+  .feature-text h2{
+    font-size:42px;
+  }
+
+  .journal{
+    grid-template-columns:1fr;
+  }
+
+  .film{
+    padding:75px 6%;
+  }
+
+  .film h2{
+    font-size:43px;
+  }
+
+  .atelier{
+    grid-template-columns:1fr;
+  }
+
+  .atelier-image{
+    min-height:550px;
+  }
+
+  .atelier-content{
+    padding:70px 8%;
+  }
+
+  .atelier-content h2{
+    font-size:45px;
+  }
+
+  .footer-top{
+    display:block;
+  }
+
+  .footer-links{
+    margin-top:35px;
+    flex-wrap:wrap;
+    gap:20px;
+  }
+
+  .footer-bottom{
+    display:block;
+    line-height:2;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header class="header">
+  <a href="#" class="logo">M.G.M.R</a>
+
+  <nav class="nav">
+    <a href="#collection">Collection</a>
+    <a href="#journal">Journal</a>
+    <a href="#films">Films</a>
+    <a href="#atelier">Atelier</a>
+  </nav>
+
+  <button class="menu">☰</button>
+</header>
+
+<section class="hero">
+  <div class="hero-content">
+    <div class="eyebrow">M.G.M.R ATELIER · 2026</div>
+
+    <h1>Modern<br>Silence.</h1>
+
+    <p>
+      A study in proportion, structure and quiet luxury.
+      M.G.M.R Atelier presents a new language of contemporary fashion.
+    </p>
+
+    <a href="#collection" class="hero-link">
+      Discover the collection
+    </a>
+  </div>
+</section>
+
+<section class="section" id="collection">
+
+  <div class="section-head">
+    <div class="section-title">Collection</div>
+    <div class="section-note">SZN 01 — 2026</div>
+  </div>
+
+  <div class="collection">
+
+    <article class="card">
+      <div class="card-image">
+        <img src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=1200&q=90">
+      </div>
+      <div class="card-info">
+        <span>ARCHÉA 01</span>
+        <span>Structured Silk</span>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="card-image">
+        <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=1200&q=90">
+      </div>
+      <div class="card-info">
+        <span>ARCHÉA 02</span>
+        <span>Soft Ivory</span>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="card-image">
+        <img src="https://images.unsplash.com/photo-1506629905607-d9c36f7f6d5c?auto=format&fit=crop&w=1200&q=90">
+      </div>
+      <div class="card-info">
+        <span>ARCHÉA 03</span>
+        <span>Architectural Form</span>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="card-image">
+        <img src="https://images.unsplash.com/photo-1485230895905-ec40ba36b9bc?auto=format&fit=crop&w=1200&q=90">
+      </div>
+      <div class="card-info">
+        <span>ARCHÉA 04</span>
+        <span>Silk Movement</span>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<section class="feature">
+
+  <div class="feature-image">
+    <div class="feature-text">
+      <div class="eyebrow">The Midnight Architecture</div>
+
+      <h2>Form becomes identity.</h2>
+
+      <p>
+        A visual exploration of volume, light and movement.
+        Designed in silence, created with intention.
+      </p>
+    </div>
+  </div>
+
+</section>
+
+<section class="film" id="films">
+
+  <div class="film-inner">
+
+    <div class="film-label">M.G.M.R FILM 001</div>
+
+    <h2>The language of movement.</h2>
+
+    <div class="video-box">
+
+      <div class="video-placeholder">
+        <div class="play">▶</div>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<section class="section" id="journal">
+
+  <div class="section-head">
+    <div class="section-title">Journal</div>
+    <div class="section-note">Ideas · Materials · Architecture</div>
+  </div>
+
+  <div class="journal">
+
+    <article class="journal-card">
+      <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1000&q=90">
+
+      <div class="journal-text">
+        <div class="journal-number">01 — FORM</div>
+        <h3>The architecture of a silhouette.</h3>
+        <p>
+          Exploring proportion, negative space and the relationship
+          between the human body and architectural form.
+        </p>
+      </div>
+    </article>
+
+    <article class="journal-card">
+      <img src="https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?auto=format&fit=crop&w=1000&q=90">
+
+      <div class="journal-text">
+        <div class="journal-number">02 — MATERIAL</div>
+        <h3>When fabric becomes sculpture.</h3>
+        <p>
+          Silk gazar, satin, chiffon and hand-finished details
+          become part of the visual language of the atelier.
+        </p>
+      </div>
+    </article>
+
+    <article class="journal-card">
+      <img src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?auto=format&fit=crop&w=1000&q=90">
+
+      <div class="journal-text">
+        <div class="journal-number">03 — VISION</div>
+        <h3>A quieter kind of luxury.</h3>
+        <p>
+          Timeless pieces created beyond seasonal noise,
+          where restraint becomes the signature.
+        </p>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<section class="atelier" id="atelier">
+
+  <div class="atelier-image"></div>
+
+  <div class="atelier-content">
+
+    <div class="eyebrow">The Atelier</div>
+
+    <h2>Designed<br>in silence.</h2>
+
+    <p>
+      M.G.M.R Atelier explores a contemporary interpretation of
+      luxury through sculptural silhouettes, refined materials
+      and considered details.
+    </p>
+
+  </div>
+
+</section>
+
+<footer class="footer">
+
+  <div class="footer-top">
+
+    <div class="footer-logo">M.G.M.R ATELIER</div>
+
+    <div class="footer-links">
+      <a href="#collection">Collection</a>
+      <a href="#journal">Journal</a>
+      <a href="#films">Films</a>
+      <a href="#atelier">Atelier</a>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <span>© 2026 M.G.M.R ATELIER</span>
+    <span>MODERN LUXURY / ARCHIVE</span>
+  </div>
+
+</footer>
+
+</body>
+</html>
