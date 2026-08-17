@@ -8,11 +8,13 @@
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
+
 body{
   background:#f5f3ee;
   color:#151515;
   font-family:Arial,Helvetica,sans-serif;
 }
+
 a{text-decoration:none;color:inherit}
 button{font:inherit}
 
@@ -100,9 +102,7 @@ nav{
 .hero-image{
   height:82vh;
   min-height:600px;
-  background:
-  url("https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=1600&q=90")
-  center/cover;
+  background:url("images/3D08084E-D814-4795-975D-4FF5A1782FE2.png") center/cover;
 }
 
 .section{
@@ -149,6 +149,7 @@ nav{
   height:100%;
   object-fit:cover;
   transition:transform .8s ease;
+  display:block;
 }
 
 .product:hover img{
@@ -180,7 +181,7 @@ nav{
   color:white;
   background:
   linear-gradient(to top,rgba(0,0,0,.6),transparent 65%),
-  url("https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=2000&q=90")
+  url("images/8A23E764-A043-4E3C-8D45-CDFB110655E3.png")
   center/cover;
 }
 
@@ -259,25 +260,11 @@ nav{
   background:#222;
 }
 
-.film-box img{
+.film-box video{
   width:100%;
   height:100%;
   object-fit:cover;
-}
-
-.play{
-  position:absolute;
-  left:50%;
-  top:50%;
-  transform:translate(-50%,-50%);
-  width:75px;
-  height:75px;
-  border:1px solid white;
-  border-radius:50%;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  font-size:18px;
+  display:block;
 }
 
 .atelier{
@@ -288,7 +275,7 @@ nav{
 
 .atelier-image{
   background:
-  url("https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=1600&q=90")
+  url("images/C7E90DA9-C978-4800-91E3-F3A202DF48B6.png")
   center/cover;
 }
 
@@ -383,7 +370,10 @@ footer{
   }
 
   nav{display:none}
-  .menu{display:block}
+
+  .menu{
+    display:block;
+  }
 
   .hero{
     display:block;
@@ -491,6 +481,7 @@ footer{
 <body>
 
 <header>
+
   <a href="#" class="logo">M.G.M.R</a>
 
   <nav>
@@ -501,6 +492,7 @@ footer{
   </nav>
 
   <button class="menu">☰</button>
+
 </header>
 
 
@@ -547,58 +539,145 @@ footer{
   <div class="products">
 
     <article class="product">
-
       <div class="product-image">
-        <img src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=1200&q=90">
+        <img src="images/3D08084E-D814-4795-975D-4FF5A1782FE2.png" alt="ARCHÉA I">
       </div>
-
       <div class="product-info">
-        <span>ARCHÉA 01</span>
-        <small>Silk Structure</small>
+        <span>ARCHÉA I</span>
+        <small>SZN 01 · 2026</small>
       </div>
-
     </article>
 
 
     <article class="product">
-
       <div class="product-image">
-        <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=1200&q=90">
+        <img src="images/8A23E764-A043-4E3C-8D45-CDFB110655E3.png" alt="ARCHÉA II">
       </div>
-
       <div class="product-info">
-        <span>ARCHÉA 02</span>
-        <small>Soft Ivory</small>
+        <span>ARCHÉA II</span>
+        <small>SZN 01 · 2026</small>
       </div>
-
     </article>
 
 
     <article class="product">
-
       <div class="product-image">
-        <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1200&q=90">
+        <img src="images/C7E90DA9-C978-4800-91E3-F3A202DF48B6.png" alt="ARCHÉA III">
       </div>
-
       <div class="product-info">
-        <span>ARCHÉA 03</span>
-        <small>Modern Form</small>
+        <span>ARCHÉA III</span>
+        <small>SZN 01 · 2026</small>
       </div>
-
     </article>
 
 
     <article class="product">
-
       <div class="product-image">
-        <img src="https://images.unsplash.com/photo-1506629905607-d9c36f7f6d5c?auto=format&fit=crop&w=1200&q=90">
+        <img src="images/D416A61B-8448-47C2-BBAF-E2FBDEEBC55B.jpeg" alt="ARCHÉA IV">
       </div>
-
       <div class="product-info">
-        <span>ARCHÉA 04</span>
-        <small>Silk Movement</small>
+        <span>ARCHÉA IV</span>
+        <small>SZN 01 · 2026</small>
       </div>
+    </article>
 
+
+    <article class="product">
+      <div class="product-image">
+        <img src="images/IMG_1655.jpeg" alt="ARCHÉA V">
+      </div>
+      <div class="product-info">
+        <span>ARCHÉA V</span>
+        <small>SZN 01 · 2026</small>
+      </div>
+    </article>
+
+
+    <article class="product">
+      <div class="product-image">
+        <img src="images/IMG_1679.jpeg" alt="ARCHÉA VI">
+      </div>
+      <div class="product-info">
+        <span>ARCHÉA VI</span>
+        <small>SZN 01 · 2026</small>
+      </div>
+    </article>
+
+
+    <article class="product">
+      <div class="product-image">
+        <img src="images/IMG_1713.jpeg" alt="ARCHÉA VII">
+      </div>
+      <div class="product-info">
+        <span>ARCHÉA VII</span>
+        <small>SZN 01 · 2026</small>
+      </div>
+    </article>
+
+
+    <article class="product">
+      <div class="product-image">
+        <img src="images/IMG_1715.jpeg" alt="ARCHÉA VIII">
+      </div>
+      <div class="product-info">
+        <span>ARCHÉA VIII</span>
+        <small>SZN 01 · 2026</small>
+      </div>
+    </article>
+
+
+    <article class="product">
+      <div class="product-image">
+        <img src="images/IMG_1738.jpeg" alt="ARCHÉA IX">
+      </div>
+      <div class="product-info">
+        <span>ARCHÉA IX</span>
+        <small>SZN 01 · 2026</small>
+      </div>
+    </article>
+
+
+    <article class="product">
+      <div class="product-image">
+        <img src="images/IMG_1953.jpeg" alt="ARCHÉA X">
+      </div>
+      <div class="product-info">
+        <span>ARCHÉA X</span>
+        <small>SZN 01 · 2026</small>
+      </div>
+    </article>
+
+
+    <article class="product">
+      <div class="product-image">
+        <img src="images/IMG_1956.jpeg" alt="ARCHÉA XI">
+      </div>
+      <div class="product-info">
+        <span>ARCHÉA XI</span>
+        <small>SZN 01 · 2026</small>
+      </div>
+    </article>
+
+
+    <article class="product">
+      <div class="product-image">
+        <img src="images/IMG_2826.png" alt="ARCHÉA XII">
+      </div>
+      <div class="product-info">
+        <span>ARCHÉA XII</span>
+        <small>SZN 01 · 2026</small>
+      </div>
+    </article>
+
+
+    <article class="product">
+      <div class="product-image">
+        <img src="images/IMG_3076.jpeg" alt="ARCHÉA XIII">
+      </div>
+      <div class="product-info">
+        <span>ARCHÉA XIII</span>
+        <small>SZN 01 · 2026</small>
+      </div>
     </article>
 
   </div>
@@ -635,7 +714,7 @@ footer{
 
     <article class="journal-card">
 
-      <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1000&q=90">
+      <img src="images/D416A61B-8448-47C2-BBAF-E2FBDEEBC55B.jpeg">
 
       <div class="journal-content">
 
@@ -655,7 +734,7 @@ footer{
 
     <article class="journal-card">
 
-      <img src="https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3?auto=format&fit=crop&w=1000&q=90">
+      <img src="images/IMG_1655.jpeg">
 
       <div class="journal-content">
 
@@ -675,7 +754,7 @@ footer{
 
     <article class="journal-card">
 
-      <img src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?auto=format&fit=crop&w=1000&q=90">
+      <img src="images/IMG_1679.jpeg">
 
       <div class="journal-content">
 
@@ -705,9 +784,10 @@ footer{
 
   <div class="film-box">
 
-    <img src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=1800&q=90">
-
-    <div class="play">▶</div>
+    <video controls playsinline preload="metadata">
+      <source src="images/c15e5d8aaca74a228eb1b44359d55300.mov" type="video/quicktime">
+      Your browser does not support this video.
+    </video>
 
   </div>
 
